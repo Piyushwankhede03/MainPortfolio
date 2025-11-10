@@ -1,0 +1,42 @@
+.contact-links {
+  color: black;
+}
+
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
+} 
+
+
+.theme-btn {
+  border: none;
+  background: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+} 
+
+
+.theme-btn:hover {
+  background: #0056b3;
+} 
+
+.project-card {
+  color: white;
+}
