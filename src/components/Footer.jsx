@@ -1,9 +1,14 @@
+import React from "react";
 import "./Footer.css";
 
-const Footer = () => (
-  <footer className="footer">
-    <p>© {new Date().getFullYear()} Piyush Wankhede. All Rights Reserved.</p>
-  </footer>
-);
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <p className="footer-text">
+        © {new Date().getFullYear()} Piyush | Built with React
+      </p>
+    </footer>
+  );
+};
 
 export default Footer;

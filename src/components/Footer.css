@@ -1,7 +1,29 @@
 .footer {
-  background: #161b22;
+  margin-top: 3rem;
+  padding: 0.8rem;
   text-align: center;
-  padding: 15px;
-  color: #8b949e;
-  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: #00b4ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00ffe0;
 }

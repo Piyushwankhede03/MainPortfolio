@@ -1,0 +1,214 @@
+
+ .skills-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00ffe0;
+  margin: 0;
+}
+
+.skills-desc {
+  font-size: 0.95rem;
+  color: #ddd;
+  margin-top: 6px;
+}
+
+/* Container popup */
+.bubble-container {
+  width: 60%;
+  height: 60vh;
+  margin: auto;
+  background-color: #2e2e2e;
+  position: relative;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(0.85);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.bubble-container.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Bubble outer: handles position + floating (translate only) */
+.bubble {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* visual ring stays on content; outer just positions */
+}
+
+/* Inner content: handles visuals + fade-in (scale/opacity) */
+.bubble-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #00ffe0;
+  border: 2px solid #00ffe0;
+  background: radial-gradient(circle, rgba(0,255,255,0.2) 0%, rgba(0,255,255,0.05) 100%);
+  box-shadow: 0 0 12px #00ffe0;
+
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+/* Sequential fade-in */
+.fade-in {
+  animation: bubbleIn 0.6s forwards;
+}
+
+@keyframes bubbleIn {
+  from { opacity: 0; transform: scale(0.6); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Hover effect on content */
+.bubble-content:hover {
+  /* transform: scale(1.08); */
+  box-shadow: 0 0 20px #00ffe0, 0 0 40px #00ffe0;
+  cursor: pointer;
+}
+
+/* Icon + label */
+.icon {
+  font-size: 48px;
+  transition: transform 0.3s ease;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 4px;
+}
+
+.icon, .icon svg { display: inline-block; }
+
+.bubble-content:hover .icon,
+.bubble-content:hover .icon svg {
+  animation: iconLeftRight 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes iconLeftRight {
+  from { transform: translateX(-4px); }
+  to   { transform: translateX(4px); }
+}
+
+/* Positions + floating (translate only on the OUTER .bubble) */
+.bubble-0 { top: 15%; left: 20%; animation: floatXY1 12s infinite ease-in-out alternate; }
+.bubble-1 { top: 25%; left: 70%; animation: floatXY2 14s infinite ease-in-out alternate; }
+.bubble-2 { top: 55%; left: 25%; animation: floatXY3 13s infinite ease-in-out alternate; }
+.bubble-3 { top: 65%; left: 75%; animation: floatXY1 15s infinite ease-in-out alternate; }
+.bubble-4 { top: 35%; left: 45%; animation: floatXY2 11s infinite ease-in-out alternate; }
+.bubble-5 { top: 75%; left: 15%; animation: floatXY3 16s infinite ease-in-out alternate; }
+.bubble-6 { top: 10%; left: 55%; animation: floatXY1 12s infinite ease-in-out alternate; }
+.bubble-7 { top: 70%; left: 50%; animation: floatXY2 14s infinite ease-in-out alternate; }
+
+/* Icon colors */
+.bubble-0 .icon { color: #61DAFB; }
+.bubble-1 .icon { color: #F7DF1E; }
+.bubble-2 .icon { color: #E34F26; }
+.bubble-3 .icon { color: #1572B6; }
+.bubble-4 .icon { color: #F05032; }
+.bubble-5 .icon { color: #9CA3AF; }
+.bubble-6 .icon { color: #646CFF; }
+.bubble-7 .icon { color: #00C7B7; }
+
+/* Floating keyframes: use translate only */
+@keyframes floatXY1 {
+  0%   { transform: translate(0px, 0px); }
+  25%  { transform: translate(12px, -8px); }
+  50%  { transform: translate(-10px, 10px); }
+  75%  { transform: translate(8px, -12px); }
+  100% { transform: translate(-6px, 6px); }
+}
+
+@keyframes floatXY2 {
+  0%   { transform: translate(0px, 0px); }
+  25%  { transform: translate(-15px, 12px); }
+  50%  { transform: translate(10px, -14px); }
+  75%  { transform: translate(-12px, 15px); }
+  100% { transform: translate(6px, -10px); }
+}
+
+@keyframes floatXY3 {
+  0%   { transform: translate(0px, 0px); }
+  25%  { transform: translate(10px, 14px); }
+  50%  { transform: translate(-14px, -10px); }
+  75%  { transform: translate(15px, 8px); }
+  100% { transform: translate(-8px, -12px); }
+}
+
+/* RESPONSIVE FIX — Smaller Screens */
+@media (max-width: 1024px) {
+  .bubble-container {
+    width: 80%;
+    height: 55vh;
+  }
+
+  .bubble {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Tablets / Medium screens */
+@media (max-width: 768px) {
+  .bubble-container {
+    width: 90%;
+    height: 50vh;
+  }
+
+  .bubble {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Re-position bubbles for perfect visibility */
+  .bubble-0 { top: 8%; left: 18%; }
+  .bubble-1 { top: 10%; left: 60%; }
+  .bubble-2 { top: 40%; left: 15%; }
+  .bubble-3 { top: 45%; left: 65%; }
+  .bubble-4 { top: 70%; left: 35%; }
+  .bubble-5 { top: 65%; left: 15%; }
+  .bubble-6 { top: 20%; left: 40%; }
+  .bubble-7 { top: 80%; left: 55%; }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .bubble-container {
+    width: 95%;
+    height: 60vh;
+  }
+
+  .bubble {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Re-position on mobile for center visibility */
+  .bubble-0 { top: 5%; left: 10%; }
+  .bubble-1 { top: 5%; left: 50%; }
+  .bubble-2 { top: 30%; left: 18%; }
+  .bubble-3 { top: 30%; left:55%; }
+  .bubble-4 { top: 65%; left: 35%; }
+  .bubble-5 { top: 70%; left: 10%; }
+  .bubble-6 { top: 70%; left: 60%; }
+  .bubble-7 { top: 50%; left: 30%; }
+}
