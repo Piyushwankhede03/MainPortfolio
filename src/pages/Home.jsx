@@ -29,7 +29,7 @@ export default function Home() {
           <div className="photo-ring rotate"></div>
           <div className="photo-frame float">
             <img
-              src="/My Photo.jpeg"
+              src="/MyPhoto.jpg"
               alt="Piyush Wankhede"
               className="profile-photo fade-in"
             />
