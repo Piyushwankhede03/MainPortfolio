@@ -27,7 +27,6 @@ const PROJECTS = [
     live: "https://react-gallerypagination.netlify.app/",
     code: "https://github.com/Piyushwankhede03/react-router-dom",
   },
-  // ... add other projects here
 ];
 
 export default function Projects() {

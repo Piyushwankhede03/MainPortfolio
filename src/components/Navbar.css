@@ -1,24 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .navbar {
   position: sticky;
   top: 0;
@@ -84,8 +64,8 @@
 }
 
 .hamburger:hover {
-  color: #00c7b7; /* accent color */
-  background: rgba(0, 199, 183, 0.1); /* same pill highlight as desktop active */
+  color: #00c7b7;
+  background: rgba(0, 199, 183, 0.1); 
 }
 
 .hamburger:active {
@@ -126,7 +106,7 @@
   pointer-events:auto;
 }
 
-/* Drawer */
+
 .drawer {
   position:fixed;
   top:0;
@@ -145,7 +125,7 @@
 .drawer.open { transform:translateX(0); }
 
 
-/* Drawer links */
+
 .drawer-links {
   list-style:none;
   display:flex;
@@ -161,11 +141,39 @@
 }
 .drawer-links li a:hover { color:#00c7b7; }
 
-/* Responsive */
+
 @media (max-width:768px) {
   .nav-links.desktop { display:none; }
   .hamburger { display:block; }
 }
 
 
+@media (max-width: 480px) {
+  .logo {
+    max-width: 60%;   
+    overflow: hidden;
+    white-space: nowrap;
+  }
 
+  .logo-initials {
+    font-size: 1.6rem;
+  }
+
+  .full-name {
+    font-size: 0.8rem;
+  }
+
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .logo {
+    max-width: 55%;
+  }
+
+  .full-name {
+    font-size: 0.75rem;
+  }
+}

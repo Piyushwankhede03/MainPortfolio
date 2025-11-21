@@ -24,9 +24,7 @@ export default function Home() {
 
   return (
     <section className="home-section">
-      {/* Top Section: Photo + Info */}
       <div className="home-top">
-        {/* Left: Glowing Photo */}
         <div className="photo-container fade-in-left">
           <div className="photo-ring rotate"></div>
           <div className="photo-frame float">

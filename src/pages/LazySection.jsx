@@ -12,7 +12,7 @@ function LazySection({ children }) {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 } // trigger when 20% visible
+      { threshold: 0.2 }
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -28,9 +28,9 @@ function LazySection({ children }) {
         React.cloneElement(child, {
           style: {
             opacity: 0,
-            transform: "translateY(20px) scale(0.95)", // start faded + smaller
+            transform: "translateY(20px) scale(0.95)", 
             transition: "opacity 0.8s ease, transform 0.8s ease",
-            transitionDelay: `${index * 0.15}s`, // staggered delay
+            transitionDelay: `${index * 0.15}s`,
           },
           className: `${child.props.className || ""} ${
             isVisible ? "child-fade-in" : ""
