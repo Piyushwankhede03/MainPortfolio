@@ -30,7 +30,7 @@ export default function Resume() {
         <div className="resume-section">
           <h4>📝 Professional Summary</h4>
           <p>
-            Results-driven Frontend Developer with strong knowledge of React.js, JavaScript (ES6+), HTML5, and CSS3.
+            Results-driven Frontend Developer with strong knowledge of React.js, JavaScript (ES6+), HTML5, CSS3, and Tailwind CSS.
             Experienced in building responsive, interactive, and high-performance single-page applications. Skilled in API
             integration, client-side routing, and UI/UX design optimization. Dedicated to delivering clean, maintainable
             code and intuitive user experiences using modern web technologies.
@@ -43,7 +43,7 @@ export default function Resume() {
           <div className="resume-section">
             <h4>⚙️ Technical Skills</h4>
             <ul className="skills-list">
-              <li><span className="key">Frontend Development:</span> React.js, JavaScript, HTML5, CSS3</li>
+              <li><span className="key">Frontend Development:</span> React.js, JavaScript, HTML5, CSS3, Tailwind CSS</li>
               <li><span className="key">React Tools:</span> Router DOM, Context API, Hooks</li>
               <li><span className="key">API & Data:</span> REST APIs, Axios, Fetch</li>
               <li><span className="key">Performance:</span> Lazy Loading, Code Splitting</li>

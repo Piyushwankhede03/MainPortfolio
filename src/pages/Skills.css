@@ -111,6 +111,8 @@
 .bubble-5 { top: 75%; left: 15%; animation: floatXY3 16s infinite ease-in-out alternate; }
 .bubble-6 { top: 10%; left: 55%; animation: floatXY1 12s infinite ease-in-out alternate; }
 .bubble-7 { top: 70%; left: 50%; animation: floatXY2 14s infinite ease-in-out alternate; }
+.bubble-8 { top: 40%; left: 80%; animation: floatXY1 13s infinite ease-in-out alternate; }
+
 
 /* Icon colors */
 .bubble-0 .icon { color: #61DAFB; }
@@ -121,6 +123,7 @@
 .bubble-5 .icon { color: #9CA3AF; }
 .bubble-6 .icon { color: #646CFF; }
 .bubble-7 .icon { color: #00C7B7; }
+.bubble-8 .icon { color: #38BDF8; }
 
 
 @keyframes floatXY1 {
@@ -178,6 +181,8 @@
   .bubble-5 { top: 65%; left: 15%; }
   .bubble-6 { top: 20%; left: 40%; }
   .bubble-7 { top: 80%; left: 55%; }
+  .bubble-7 { top: 55%; left: 45%; }
+
 }
 
 @media (max-width: 480px) {
@@ -199,4 +204,5 @@
   .bubble-5 { top: 70%; left: 10%; }
   .bubble-6 { top: 70%; left: 60%; }
   .bubble-7 { top: 50%; left: 30%; }
+  .bubble-7 { top: 75%; left: 50%; }
 }

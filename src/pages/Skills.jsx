@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub } from "react-icons/fa";
-import { SiVite, SiNetlify } from "react-icons/si";
+import { SiVite, SiNetlify, SiTailwindcss } from "react-icons/si";
 import "./Skills.css";
 
 const skills = [
@@ -8,6 +8,7 @@ const skills = [
   { name: "JavaScript", icon: <FaJs />, color: "#F7DF1E" },
   { name: "HTML5", icon: <FaHtml5 />, color: "#E34F26" },
   { name: "CSS3", icon: <FaCss3Alt />, color: "#1572B6" },
+  { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38BDF8" },
   { name: "Git", icon: <FaGitAlt />, color: "#F05032" },
   { name: "GitHub", icon: <FaGithub />, color: "#9CA3AF" },
   { name: "Vite", icon: <SiVite />, color: "#646CFF" },
